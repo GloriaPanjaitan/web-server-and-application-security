@@ -41,7 +41,7 @@ This approach reflects real-world operational practice, where engineers prioriti
 
 **Observed Log (Original):**
 
- <img src="screenshots/Notice.png" width="100%">
+ <img src="Screenshot/Notice.png" width="100%">
 
 **Explanation:**
 This NOTICE log indicates that the **ModSecurity module was successfully loaded** and initialized by Apache. It confirms compatibility between the compiled and loaded PCRE versions, meaning the Web Application Firewall is ready to inspect HTTP traffic.
