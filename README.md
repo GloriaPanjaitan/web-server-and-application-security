@@ -1,6 +1,6 @@
 # Security Log Configuration and Monitoring on Apache Web Server
 
-## 📌 Topic Overview
+##  Topic Overview
 
 This module demonstrates hands-on practice in **web server security management**, with a focus on **log analysis and access control on Apache Web Server**.
 
@@ -10,7 +10,7 @@ This approach reflects real-world operational practice, where engineers prioriti
 
 ---
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 * Understand Apache error log structure
 * Identify and interpret log levels: NOTICE, DEBUG, ERROR
@@ -19,7 +19,7 @@ This approach reflects real-world operational practice, where engineers prioriti
 
 ---
 
-## 🛠️ Environment
+##  Environment
 
 * OS: Ubuntu (Virtual Machine)
 * Web Server: Apache 2.4.52
@@ -35,9 +35,9 @@ This approach reflects real-world operational practice, where engineers prioriti
 
 ---
 
-## 🔍 Practiced Scenarios & Evidence
+##  Practiced Scenarios & Evidence
 
-### 1️⃣ NOTICE — Module Initialization Information
+### 1️. NOTICE — Module Initialization Information
 
 **Observed Log (Original):**
 
@@ -54,13 +54,11 @@ This NOTICE log indicates that the **ModSecurity module was successfully loaded*
 
 ---
 
-### 2️⃣ DEBUG — Internal Monitoring Process
+### 2️. DEBUG — Internal Monitoring Process
 
 **Observed Log (Original):**
 
-```
-[Tue Jan 13 21:26:00.373173 2026] [watchdog:debug] [pid 56954:tid 139547782072192] mod_watchdog.c(445): AH010033: Watchdog: Running with WatchdogInterval 1000ms
-```
+<img src="Screenshot/Debug.png" width="100%">
 
 **Explanation:**
 This DEBUG log shows that Apache's **watchdog process is actively running**, performing internal periodic checks every 1000 milliseconds. This component is responsible for supervising internal modules and ensuring service reliability.
@@ -73,13 +71,11 @@ This DEBUG log shows that Apache's **watchdog process is actively running**, per
 
 ---
 
-### 3️⃣ ERROR — Access Control Enforcement
+### 3️. ERROR — Access Control Enforcement
 
 **Observed Log (Original):**
 
-```
-[Tue Jan 13 22:33:57.079402 2026] [authz_core:error] [pid 177253:tid 133422437213760] [client ::1:43506] AH01630: client denied by server configuration: /var/www/html/warn-test.html
-```
+<img src="Screenshot/Error.png" width="100%">
 
 **Explanation:**
 This ERROR log was generated when a client attempted to access a protected resource. Apache explicitly denied the request based on access control rules defined in the server configuration.
@@ -98,7 +94,7 @@ This ERROR log was generated when a client attempted to access a protected resou
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 
 This module validates the ability to:
 
@@ -110,8 +106,3 @@ Only **NOTICE, DEBUG, and ERROR** log levels are documented, as these were the l
 
 ---
 
-## 📈 Next Steps
-
-* Simulate service-level failures to observe CRITICAL logs
-* Correlate Apache logs with system logs (`journalctl`)
-* Extend analysis toward SOC-level incident scenarios
