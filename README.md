@@ -102,7 +102,6 @@ This module validates the ability to:
 * Interpret real-world security logs
 * Distinguish between normal operations and security-relevant events
 
-Only **NOTICE, DEBUG, and ERROR** log levels are documented, as these were the levels **verifiably generated through hands-on practice**. Future modules may expand into simulated failure scenarios to explore `WARN` and `CRITICAL` conditions.
-
+Only **NOTICE, DEBUG, and ERROR** log levels are documented, as these were the levels **verifiably generated through hands-on practice**. 
 ---
 
