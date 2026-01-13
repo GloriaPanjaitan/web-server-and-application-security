@@ -41,9 +41,7 @@ This approach reflects real-world operational practice, where engineers prioriti
 
 **Observed Log (Original):**
 
-```
-[Tue Jan 13 21:30:09.056743 2026] [:notice] [pid 67235:tid 132640534992768] ModSecurity: PCRE compiled version="8.39 "; loaded version="8.39 2016-06-14"
-```
+ <img src="screenshots/Notice-log.png" width="100%">
 
 **Explanation:**
 This NOTICE log indicates that the **ModSecurity module was successfully loaded** and initialized by Apache. It confirms compatibility between the compiled and loaded PCRE versions, meaning the Web Application Firewall is ready to inspect HTTP traffic.
